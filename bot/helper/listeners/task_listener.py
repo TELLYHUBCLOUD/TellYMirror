@@ -379,7 +379,7 @@ class TaskListener(TaskConfig):
                     ):
                         if chat_id.isdigit():
                             chat_id = int(f"-100{chat_id}")
-                        flink = f"https://t.me/{TgClient.BNAME}?start={encode_slink('file' + chat_id + '&&' + msg_id)}"
+                        flink = f"https://t.me/{TgClient.BNAME}?start={encode_slink('file' + str(chat_id) + '&&' + msg_id)}"
                         fmsg += f"\n╰ <b>Get Media</b> → <a href='{flink}'>Store Link</a> | <a href='https://t.me/share/url?url={flink}'>Share Link</a>"
                     fmsg += "\n"
                     if len(fmsg.encode() + msg.encode()) > 4000:
