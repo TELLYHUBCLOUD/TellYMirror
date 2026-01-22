@@ -18,8 +18,7 @@ async def authorize(_, message):
     ) and reply_to.id != message.message_thread_id:
         chat_id = (reply_to.from_user or reply_to.sender_chat).id
     else:
-        if message.is_topic_message:
-            thread_id = message.message_thread_id
+        thread_id = message.message_thread_id
         chat_id = message.chat.id
     if chat_id in user_data and user_data[chat_id].get("AUTH"):
         if (
@@ -57,8 +56,7 @@ async def unauthorize(_, message):
     ) and reply_to.id != message.message_thread_id:
         chat_id = (reply_to.from_user or reply_to.sender_chat).id
     else:
-        if message.is_topic_message:
-            thread_id = message.message_thread_id
+        thread_id = message.message_thread_id
         chat_id = message.chat.id
     if chat_id in user_data and user_data[chat_id].get("AUTH"):
         if thread_id is not None and thread_id in user_data[chat_id].get(
