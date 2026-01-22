@@ -4,6 +4,9 @@ from uvloop import install
 
 install()
 
+bot_loop = new_event_loop()
+set_event_loop(bot_loop)
+
 from subprocess import run as srun
 from os import getcwd
 from asyncio import Lock, new_event_loop, set_event_loop
@@ -38,8 +41,7 @@ pyroutils.MIN_CHAT_ID = -999999999999
 pyroutils.MIN_CHANNEL_ID = -100999999999999
 bot_start_time = time()
 
-bot_loop = new_event_loop()
-set_event_loop(bot_loop)
+
 
 basicConfig(
     format="[%(asctime)s] [%(levelname)s] - %(message)s",  #  [%(filename)s:%(lineno)d]
