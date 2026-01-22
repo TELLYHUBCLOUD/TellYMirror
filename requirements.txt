@@ -44,3 +44,4 @@ yt-dlp[default,curl-cffi]
 heroku3
 html_telegraph_poster
 https://github.com/IamDvis/pyrogram/archive/dvis.zip
+megapy
