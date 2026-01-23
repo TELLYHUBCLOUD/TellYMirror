@@ -235,8 +235,8 @@ class Config:
 
 
 class BinConfig:
-    ARIA2_NAME = "aria2c"
-    QBIT_NAME = "qbittorrent-nox"
-    FFMPEG_NAME = "ffmpeg"
-    RCLONE_NAME = "rclone"
-    SABNZBD_NAME = "sabnzbdplus"
+    ARIA2_NAME = "xria"
+    QBIT_NAME = "xnox"
+    FFMPEG_NAME = "xtra"
+    RCLONE_NAME = "xone"
+    SABNZBD_NAME = "xnzb"
